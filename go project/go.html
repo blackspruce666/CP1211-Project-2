@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="eng">
+    
+<head>
+<style>
+    h2 {color:green}
+</style>
+
+    <title>The Game of Go</title>
+
+</head>
+<link href="stylesheet.css" rel="stylesheet">
+<body>
+    <div id="bigdiv">
+
+<h1 style=color:blue>The Game of Go</h1>
+
+<img src="goban.jpeg" alt="black and white stones arranged on a go board"  class="goban">
+
+<h1 id="welcome">Welcome to my page about Go.</h1> 
+
+<h2 >Navigation</h2>
+
+<ul>
+    <li class="nav"><a href="#history">History</a></li>
+    <li class="nav"><a href="#howtoplay">How to Play</a></li>
+    <li class="nav"><a href="#wheretoplay">Where to play</a></li>
+</ul>
+
+<hr />
+<div id="history_div">
+<h3 id="history">History</h3>
+<p>
+        Wikipedia says about go,
+    <blockquote>"Go is an abstract strategy board game for two players in which the aim is to 
+        surround more territory than the opponent. The game was invented in China more than 
+        2,500 years ago and is believed to be the oldest board game continuously played to 
+        the present day. A 2016 survey by the International Go Federation's 75 member nations 
+        found that there are over 46 million people worldwide who know how to play Go and 
+        over 20 million current players, the majority of whom live in East Asia."</blockquote>
+    
+     <br>
+    Since go is so old, there are many proverbs and sayings around it. Some are funny, some 
+    are useful, some are confusing and some are all three. Here are some of my favorites:
+    
+    <ul>
+        <li><q>Don't go fishing while your house is on fire</q></li>
+        <li><q> When in doubt, <a href="https://senseis.xmp.net/?Tenuki"> tenuki </a> </q></li>
+        <li><q>Make a fist before striking </q></li>
+        <li><q>Nets are better than ladders</q></li>
+        <li><q>Lose your first 50 games as fast as you can</q></li>
+        <li><q>Riding the tiger, it is difficult to get off</q></li>
+        <li><q>The enemy's key point is your's.</q></li>
+
+    </ul>
+<br>
+There are many, many more <a href="https://senseis.xmp.net/?GoProverbs">
+    here. </a>
+    <br>
+  <label for="email">  Sign up to get a new go proverb every week!: </label>
+    <input type="email" id="email" name="email" placeholder="email@example.com">
+
+</a>
+</p>
+</div>
+<hr />
+<div id="htpdiv">
+<h3 id="howtoplay" >How to Play</h3>
+<h4 class="instructions">Basics</h4>
+The rules of go are fairly straightforward. Each player plays 
+stones of one color, black or white. Generally, the less experienced 
+player plays the black stones and takes the first turn. A turn consists
+of placing a stone of your color on any intersection of lines on the board.
+At any point a player may choose to pass their turn. When both players pass 
+the game is considered finished and can be scored.
+
+<h4 class="instructions">Life and Death</h4>
+<p>When the first stone is played in the middle of the board (or anywhere that
+is not on the outer edge of the board) it is considered to have four(4) <b>liberties.</b>
+Liberties are what determine if a stone or group of stones is/are considered 
+dead or alive. </p>
+
+<figure>
+    <img src="4liberties.png" id="four_liberties" class="howtoimg">
+<figcaption>The black stone shown here has 4 liberties</figcaption>
+</figure>
+
+<br>
+
+<p>When two stones of the same color are directly adjacent to each other, they
+    are considered to be connected and therefore, share their liberties. Stones are 
+    <b>not</b> considered connected if the are diagonally adjacent only.
+</p>
+
+<figure>
+    <img src="6liberties.png" id="six_liberties" class="howtoimg">
+<figcaption>The group of black stone shown here has 6 liberties, however the other stone is
+    not connected and it only has 4.
+</figcaption>
+</figure>
+
+<br>
+
+<p>
+    Stone of opposing colors do not share liberties. If a black group completely surrounds a white 
+    group, and the white group has no internal liberties (called "eyes"), black captures the white 
+    group and keeps them to add to black's score at the end of the game.
+</p>
+
+<br>
+<figure>
+    <img src="capturing.png" id="capture" class="howtoimg">
+<figcaption>The white stone and the black stone both have three liberties in the first image.
+    In the second, black is reduced to one liberty. This state of having only one liberty is
+    called <b>"atari."</b> In the third image, white has captured the black stone and scores one point.
+</figcaption>
+</figure>
+<br>
+
+<p>You can capture large groups as well as individual stones. <br>
+You are not allowed to play moves that would be "suicidal" or moves
+that would cause one of your own group's liberties to be reduced to zero. However, 
+a move can create liberties by capturing, allowing you to play in spaces that 
+would otherwise be suicidal.
+</p>
+
+<br>
+<figure>
+    <img src="groupcap.png" id="group_capture" class="howtoimg">
+<figcaption>In the first image the white group has two liberties remaining. Black is unable to play 
+    at d3 on their next turn because that stone would have no liberties. In the second image white
+     is left with only a single liberty. Now, when black plays d3 in the third image, white is captured
+     and black scores 11 points! 
+</figcaption>
+</figure>
+<br>
+<p>
+    The only way to guarantee that a group will not be captured is to give it (at least) two eyes, or liberties
+    the are surrounded by the group. As we saw in a previous example, one eye is not enough because, 
+    if the external liberties are all covered by the opponent, our single eye can be filled. But the 
+    opponent can only play one stone per turn. Therefore, if the group has two internal liberties (eyes) 
+    it can never be captured. More eyes are better(more points!), but if you have two, you will never die.
+</p>
+
+<br>
+<figure>
+    <img src="2eyes.png" id="two_eyes" class="howtoimg">
+<figcaption>The black group is small, but safe! 
+</figcaption>
+</figure>
+<br>
+
+<h4 class="instructions">Ko</h4>
+<p><b>Ko</b> can be a very tricky concept. If it were not for the rule of ko, it would be easy for games
+    to repeat the same two board positions over and over again as the players fight for a single 
+    capture with no way to resolve it. The website 
+    <a href="https://senseis.xmp.net/?Ko">sensei's library</a> 
+    does a good job of explaining this rule.
+</p>
+<p>This video is also helpful <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5PTXdR8hLlQ"
+     title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+      picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+
+<h4 class="instructions">Score</h4>
+
+<p>
+There are two main sets of rules for scoring a game of go, <b>area scoring</b> and <b>territory scoring.</b>
+In territory scoring, your score is the number of empty points surrounded by only your stones
+plus the number of stones you captured from your opponent. If you played white, you also get 
+extra points, called <b>komi</b>, for going second. Usually komi is worth 6.5 points. This is to 
+compensate for going second. It also means that the scores can not be tied because black
+can not score half of a point. 
+
+</p>
+</div>
+<hr   />
+<h3 id="wheretoplay">Where to play</h3>
+
+<p>The most popular website for English speakers to play go on is <a href="https://online-go.com">OGS (Online Go Server).</a>
+    It is also the easiest to use because it only requires an account, which is free to sign up for.
+    You can play in your browser, so no software needs to be downloaded or installed, which is very
+    convenient.    
+</p>
+<p>
+    There are other servers such as 
+    <a href="https://lutris.net/games/fox-go-server/" >Fox</a> and 
+    <a href="http://www.tygemgo.com/">Tygem</a>
+    which are more popular among players in Eastern Asia and more competitive players. However, both of these servers
+    require the user to download and install their software and, due to their age, are generally less user-friendly
+    than OGS. 
+</p>
+
+<h3>Go play some go!</h3>
+<p>Now you should have everything you need to start playing go! Have fun!</p>
+
+<footer>
+    <p class="foot"  font-size="smaller">Author: Ben Basha  &emsp;  Contact us at <a href="fake@example.com"> fake@example.com</a>  </p>
+</footer>
+</div>
+</body>
+
