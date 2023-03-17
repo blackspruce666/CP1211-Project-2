@@ -1,0 +1,73 @@
+
+h3 {
+    color:orangered;
+    font-weight: 200;
+}
+
+ul li{
+    font-style: italic;
+    font-size: larger;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+    color:gray;
+}
+
+#bigdiv{
+    display:flex;
+    flex-direction: column;
+}
+
+#history{
+    font-weight: 800;
+}
+
+.goban{
+    height: 400px;
+    width: 750px;
+}
+
+#htpdiv{
+    margin: 5%;
+    padding: 1cm;
+    border-style: groove;
+    border: 10cm;
+    background-color: blue; 
+    color:yellow
+}
+
+#history_div{
+    margin: 5%;
+    padding: 1cm;
+    border-style: groove;
+    background-image: url("gopainting.jpeg") ;
+    background-size:100%;
+    color:magenta;
+}
+
+#welcome {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+
+
+#email{
+    border-bottom: 2px;
+}
+
+
+
+.nav{
+    font-style:normal ;
+}
+
+.howtoimg{
+    cursor: crosshair;
+    flex-shrink: 2;
+}
+
+.instructions{
+    font-size: larger;
+}
